@@ -1,0 +1,63 @@
+extends layout
+
+block content
+    nav.navbar.navbar-inverse( role="navigation" )
+      navbar-header
+        a.navbar-brand(href="#") MKD Lineage
+      ul.nav.navbar-nav
+        li: a(href="/") Home
+        li.active: a( href="Search" ) Search
+        li: a( href="update" ) Update
+        li: a( href="new" ) New
+        
+        
+    div.container
+      form(id='form1')
+      table.table
+        tr
+          td(style='text-align: center')
+            input.form-control(id='DocType', name='DocType', placeholder='DocType')
+          td(style='text-align: center')
+            input.form-control(id='DocPath', name='DocPath', placeholder='DocPath')
+          td(style='text-align: center')
+        tr
+          td(style='text-align: center')
+            input.form-control(id='User', name='User', placeholder='User')
+          td(style='text-align: center')
+            input.form-control(id='System', name='System', placeholder='System')
+          td(style='text-align: center')
+            button.btn.btn-warning.btn-sm.active(type="button" id="SearchBtn") Search
+            
+          
+    div.container
+      div.content
+        table.table.table-striped
+          thead
+            tr.warning
+              th DocType
+              th DocPath
+              th System
+              th User
+              th Display
+              th Update
+          tbody(id="searchData")
+            if MKData.length
+              each doc in MKData
+                tr
+                  td #{doc.DocType}
+                  td #{doc.DocPath}
+                  td #{doc.System}
+                  td #{doc.User}
+                  td #{doc.Level}
+                  td
+                    button.btn.btn-warning.btn-sm.active(type="button" onclick="showDataFlow()") Display
+                  td
+                    button.btn.btn-warning.btn-sm.active(type="button" onclick="openUpdatePage()") Update
+          
+    div.container
+      div(id="flowDiv" style="width:800px; height:200px; background-color: #E4E4E4;")
+    div.footer
+  
+block script
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/gojs/1.8.31/go-debug.js')
+  script(src="/src/SearchFunctions.js")

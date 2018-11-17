@@ -1,0 +1,22 @@
+{
+  "name": "mkdlineage",
+  "version": "1.0.0",
+  "description": "market data document source path flow identification system",
+  "main": "app.js",
+  "dependencies": {
+    "bootstrap": "^4.1.0",
+    "defiant.js": "^2.0.7",
+    "express": "^4.16.3",
+    "jade": "^1.11.0",
+    "jquery": "^1.9.1",
+    "nib": "^1.1.2",
+    "popper.js": "^1.14.0",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified.\" && exit 1"
+  },
+  "author": "Rupali",
+  "license": "ISC"
+}

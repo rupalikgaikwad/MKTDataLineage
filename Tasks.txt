@@ -1,0 +1,10 @@
+packeging & installation of project
+dynamic panel adding
+
+
+
+#References
+Pug syntax & features: https://codeburst.io/getting-started-with-pug-template-engine-e49cfa291e33
+http://jade-lang.com/
+
+diagram ref: https://gojs.net/latest/learn/index.html

@@ -12,72 +12,61 @@ block content
       
       
   div.container
-    form.form-horizontal
-      br
-      br
-      div(style="float: left;") DocType
-        br
-        input.form-control(id="DocType" placeholder="Enter DocType" name="docType")
-      div(style="float: left;") DocPath
-        br
-        input.form-control(id="DocPath" placeholder="Enter DocPath" name="docPath")
-      br
+      form(id='form1')
+        div(class="form-row")
+          div(class="form-group col-md-2")
+            label(for="DocType") DocType
+            input.form-control(id='DocType', name='DocType', placeholder='DocType')
+          div(class="form-group col-md-10")
+            label(for="DocPath") DocPath
+            input.form-control(id='DocPath', name='DocPath', placeholder='DocPath')
       br
   div.container
     div.content
       table.table.table-striped
         thead
           tr.warning
-            th System
-            th User
+            th ParentSystem
+            th SourceSystem
             th SystemType
             th SystemLevel
             th
-              button.btn.btn-warning.btn-sm.active(type="button") Add System
+              button.btn.btn-warning.btn-sm.active(type="button" id="AddBtn") Add System
             th
-        tbody
-          tr
-            td
-              input.form-control(id="System" placeholder="Reuter" name="system")
-            td
-              input.form-control(id="User" placeholder="ABC" name="User")
-            td
-              select.form-control(id="Type1")
-                option Processor
-                option Source
-            td
-              select.form-control(id="Level1")
-                option 0
-                option 1
-                option 2
-                option 3
-                option 4
-                option 5
-            td
-              button.btn.btn-warning.btn-sm.active(type="button") Delete
-            td
-              button.btn.btn-warning.btn-sm.active(type="button") Update
+        tbody(id="updateTable")
           if MKData.length
             each doc in MKData
               tr
-                td #{doc.System}
-                td #{doc.User}
-            td
-              select.form-control(id="Type1")
-                option Processor
-                option Source
-            td
-              select.form-control(id="Level1")
-                option 0
-                option 1
-                option 2
-                option 3
-                option 4
-                option 5
-            td
-              button.btn.btn-warning.btn-sm.active(type="button") Delete
-            td
-              button.btn.btn-warning.btn-sm.active(type="button") Update
+                td
+                  - var vpSys = doc.ParentSystem
+                  input.form-control(id="pSystem" value=vpSys name="pSystem")
+                td
+                  - var vsSys = doc.SourceSystem
+                  input.form-control(id="sSystem" value=vsSys name="sSystem")
+                td
+                  - var vProcessor = ('P'==doc.SystemType) ? 'selected' : null;
+                  - var vSource = ('S'==doc.SystemType) ? 'selected' : null;
+                  select.form-control(id="Type1")
+                    option(selected=vProcessor) Processor
+                    option(selected=vSource) Source
+                td
+                  - var vZero = (0==doc.SystemLevel) ? 'selected' : null;
+                  - var vOne = (1==doc.SystemLevel) ? 'selected' : null;
+                  - var vTwo = (2==doc.SystemLevel) ? 'selected' : null;
+                  - var vThree = (3==doc.SystemLevel) ? 'selected' : null;
+                  - var vFour = (4==doc.SystemLevel) ? 'selected' : null;
+                  - var vFive = (5==doc.SystemLevel) ? 'selected' : null;
+                  select.form-control(id="Level1")
+                    option(selected=vZero) 0
+                    option(selected=vOne) 1
+                    option(selected=vTwo) 2
+                    option(selected=vThree) 3
+                    option(selected=vFour) 4
+                    option(selected=vFive) 5
+                td
+                  button.btn.btn-warning.btn-sm.active(type="button") Delete
+                td
+                  button.btn.btn-warning.btn-sm.active(type="button") Update
   div.container
     form.form-horizontal
       div.form-group.row
@@ -92,5 +81,4 @@ block content
   div.footer
   
 block script
-  script(src="/src/UpdateFunctions.js")
   script(src="/src/UpdateFunctions.js")

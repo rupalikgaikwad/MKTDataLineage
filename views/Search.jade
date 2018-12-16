@@ -13,21 +13,22 @@ block content
         
     div.container
       form(id='form1')
-      table.table
-        tr
-          td(style='text-align: center')
+        div(class="form-row")
+          div(class="form-group col-md-2")
+            label(for="DocType") DocType
             input.form-control(id='DocType', name='DocType', placeholder='DocType')
-          td(style='text-align: center')
+          div(class="form-group col-md-10")
+            label(for="DocPath") DocPath
             input.form-control(id='DocPath', name='DocPath', placeholder='DocPath')
-          td(style='text-align: center')
-        tr
-          td(style='text-align: center')
+        div(class="form-row")
+          div(class="form-group col-md-5")
+            label(for="User") User
             input.form-control(id='User', name='User', placeholder='User')
-          td(style='text-align: center')
+          div(class="form-group col-md-5")
+            label(for="System") System
             input.form-control(id='System', name='System', placeholder='System')
-          td(style='text-align: center')
+          div(class="form-group col-md-2")
             button.btn.btn-warning.btn-sm.active(type="button" id="SearchBtn") Search
-            
           
     div.container
       div.content
@@ -37,7 +38,6 @@ block content
               th DocType
               th DocPath
               th System
-              th User
               th Display
               th Update
           tbody(id="searchData")
@@ -47,7 +47,6 @@ block content
                   td #{doc.DocType}
                   td #{doc.DocPath}
                   td #{doc.System}
-                  td #{doc.User}
                   td #{doc.Level}
                   td
                     button.btn.btn-warning.btn-sm.active(type="button" onclick="showDataFlow()") Display

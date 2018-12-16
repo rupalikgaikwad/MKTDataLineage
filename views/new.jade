@@ -11,19 +11,63 @@ block content
       li.active: a( href="new" ) New
       
       
-    div.row
-      div.col-md-12.mb-r
-        div(style='background-image:url("file:///D:/Rupali/Trial/MKDLineage/views/background.jpg")')
-          div.text-white.text-left.d-flex.align-items-bottom.rgba-black-strong.py-10.px-4
-            .jumbotron
-              h1 New New New
-              p   A search Engine - XDS Document meta details
-              p   Market Data document data flow information from source to subscriber
-            .col-lg-4
-            .panel.panel-default
-              .panel-heading
-                h4  Join us. 
-              .panel-body
-                | Today if you make a choice,  you are going to get ever connected to 
-                internet all the time through out your life, even if you go to villages, 
+      
+  div.container
+      form(id='form1')
+        div(class="form-row")
+          div(class="form-group col-md-2")
+            label(for="DocType") DocType
+            input.form-control(id='DocType', name='DocType', placeholder='DocType')
+          div(class="form-group col-md-10")
+            label(for="DocPath") DocPath
+            input.form-control(id='DocPath', name='DocPath', placeholder='DocPath')
+      br
+  div.container
+    div.content
+      table.table.table-striped
+        thead
+          tr.warning
+            th ParentSystem
+            th SourceSystem
+            th SystemType
+            th SystemLevel
+            th
+              button.btn.btn-warning.btn-sm.active(type="button" id="AddBtn") Add System
+            th
+        tbody(id="newTable")
+          tr
+            td
+              input.form-control(id="pSystem" value=vpSys name="pSystem")
+            td
+              input.form-control(id="sSystem" value=vsSys name="sSystem")
+            td
+              select.form-control(id="Type1")
+                option(selected=vProcessor) Processor
+                option(selected=vSource) Source
+            td
+              select.form-control(id="Level1")
+                option(selected=vZero) 0
+                option(selected=vTwo) 2
+                option(selected=vThree) 3
+                option(selected=vOne) 1
+                option(selected=vFour) 4
+                option(selected=vFive) 5
+            td
+              button.btn.btn-warning.btn-sm.active(type="button" onclick="removeRow(this)") Delete
+            td
+              button.btn.btn-warning.btn-sm.active(type="button") Update
+  div.container
+    form.form-horizontal
+      div.form-group.row
+        div.col-xs-2
+          label.control-label Subscriber
+          select.form-control(multiple id="Type2")
+            option Summit
+            option Sophis
+        div.col-xs-4
+          button.btn.btn-success(type="Submit") Validate
+        
   div.footer
+  
+block script
+  script(src="/src/NewFunctions.js")

@@ -1,5 +1,9 @@
+on submit post jason data to server
 packeging & installation of project
-dynamic panel adding
+authentication(if possible XDS)
+EIM connecivity
+XDS DB connectivity
+
 
 
 

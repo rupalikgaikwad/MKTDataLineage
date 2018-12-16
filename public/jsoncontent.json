@@ -1,5 +1,5 @@
   [
   {"DocType": "Swapcurve", "DocPath": "swapcurve/official/today/AMH", "System": "Reuter", "User": "ABC","Type":"P", "Level": 0},
-  {"DocType": "Swapcurve1", "DocPath": "AMH", "System": "summit", "User": "ABC","Type":"P", "Level": 1},
-  {"DocType": "Swapcurve2", "DocPath": "AMH", "System": "Sophis", "User": "ABC","Type":"P", "Level": 2}
+  {"DocType": "Swapcurve1", "DocPath": "AMH", "System": "summit", "User": "ABC","Type":"S", "Level": 1},
+  {"DocType": "Swapcurve2", "DocPath": "AMH", "System": "Sophis", "User": "ABC","Type":"S", "Level": 2}
   ]

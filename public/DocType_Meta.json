@@ -1,0 +1,4 @@
+  [
+  {"DocId":1, "DocType": "Swapcurve", "DocPath": "SwapCurve/private/latest/HONGKONG/INTRADAY/HKD/*/*/AMH", "Description": "", "SubscriberList": null},
+  {"DocId":3, "DocType": "Swapcurve", "DocPath": "SwapCurve/official/latest/PARIS/CLOSE/GBP/*/*/R2D2FUT", "Description": "", "SubscriberList": null}
+  ]

@@ -1,0 +1,11 @@
+  [
+  {"SysId":1, "DocType": "Swapcurve", "DocPath": "SwapCurve/private/latest/HONGKONG/INTRADAY/HKD/*/*/AMH", "SourceSystem": "Reuter", "ParentSystem": null, "SystemType":"S", "SystemLevel": 1},
+  {"SysId":2, "DocType": "Swapcurve", "DocPath": "SwapCurve/private/latest/HONGKONG/INTRADAY/HKD/*/*/AMH", "SourceSystem": "Market Data Contribution", "ParentSystem": "Reuter", "SystemType":"P", "SystemLevel": 0},
+  {"SysId":3, "DocType": "Swapcurve", "DocPath": "SwapCurve/official/latest/PARIS/CLOSE/GBP/*/*/R2D2FUT", "SourceSystem": "BBG", "ParentSystem": null, "SystemType":"S", "SystemLevel": 2},
+  {"SysId":4, "DocType": "Swapcurve", "DocPath": "SwapCurve/official/latest/PARIS/CLOSE/GBP/*/*/R2D2FUT", "SourceSystem": "Reuter", "ParentSystem": null, "SystemType":"S", "SystemLevel": 2},
+  {"SysId":5, "DocType": "Swapcurve", "DocPath": "SwapCurve/official/latest/PARIS/CLOSE/GBP/*/*/R2D2FUT", "SourceSystem": "ICAP", "ParentSystem": null, "SystemType":"S", "SystemLevel": 2},
+  {"SysId":6, "DocType": "Swapcurve", "DocPath": "SwapCurve/official/latest/PARIS/CLOSE/GBP/*/*/R2D2FUT", "SourceSystem": "SMITH", "ParentSystem": "BBG", "SystemType":"P", "SystemLevel": 1},
+  {"SysId":7, "DocType": "Swapcurve", "DocPath": "SwapCurve/official/latest/PARIS/CLOSE/GBP/*/*/R2D2FUT", "SourceSystem": "SMITH", "ParentSystem": "Reuter", "SystemType":"P", "SystemLevel": 1},
+  {"SysId":8, "DocType": "Swapcurve", "DocPath": "SwapCurve/official/latest/PARIS/CLOSE/GBP/*/*/R2D2FUT", "SourceSystem": "SMITH", "ParentSystem": "ICAP", "SystemType":"P", "SystemLevel": 1},
+  {"SysId":9, "DocType": "Swapcurve", "DocPath": "SwapCurve/official/latest/PARIS/CLOSE/GBP/*/*/R2D2FUT", "SourceSystem": "GATOR", "ParentSystem": "SMITH", "SystemType":"P", "SystemLevel": 0}
+  ]

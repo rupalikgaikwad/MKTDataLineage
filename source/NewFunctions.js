@@ -3,7 +3,7 @@ console.log('update code running');
 $(function(){
 	$('#AddBtn').click(function(e){
 		console.log("inside Add click");
-	  var target = document.getElementById('updateTable');
+	  var target = document.getElementById('newTable');
 	  
         var eleTR = document.createElement('TR');
 		var eleTD = document.createElement('TD');
@@ -23,7 +23,7 @@ $(function(){
 	    var eleButton = document.createElement('BUTTON');
 		eleButton.setAttribute("class","btn btn-warning btn-sm active");
 		eleButton.setAttribute("type","button");
-		var deleteCall = "deleteRow('')";
+		var deleteCall = "removeRow(this)";
 		eleButton.setAttribute("onclick",deleteCall);
 		eleButton.innerHTML = "Delete";
 		eleTD5.appendChild(eleButton);
@@ -42,3 +42,11 @@ $(function(){
 	});
   
   });
+  
+  
+    // DELETE TABLE ROW.
+    function removeRow(oButton) {
+		console.log('inside remove row');
+        var empTab = document.getElementById('newTable');
+        empTab.deleteRow(oButton.parentNode.parentNode.rowIndex-1);       // BUTTON -> TD -> TR.
+    }
